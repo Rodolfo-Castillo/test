@@ -1,21 +1,17 @@
-{% extends 'layouts/app.html' %}
-
-{% load manifest static %}
-
-{% block styles %}
-<link rel="stylesheet" href="{% manifest 'pages/test/home.css' %}">
-{% endblock %}
-
-{% block title %}
-  Home
-{% endblock %}
-
-{% block content %}
-<home-page
-  :context="{{ context_json }}"
+{% extends 'layouts/app.html' %} {% load manifest static %} {% block styles %}
+<link rel="stylesheet" href="{% manifest 'pages/test/home.css' %}" />
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
 />
-{% endblock %}
-
-{% block scripts_bottom %}
-<script type="text/javascript" src="{% manifest 'pages/test/home.js' %}"></script>
+{% endblock %} {% block title %} Home {% endblock %} {% block content %}
+<home-page :context="{{ context_json }}" />
+{% endblock %} {% block scripts_bottom %}
+<script
+    type="text/javascript"
+    src="{% manifest 'pages/test/home.js' %}"
+></script>
 {% endblock %}

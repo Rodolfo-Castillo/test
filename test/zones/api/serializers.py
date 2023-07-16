@@ -6,7 +6,7 @@ from zones.models import Zone, Distribution
 class DistributionSerializer(serializers.ModelSerializer):
     class Meta:
         model = Distribution
-        fields = ['id', 'percentage']
+        fields = ['id', 'percentage','zone']
 
 
 class ZoneSerializer(serializers.ModelSerializer):
@@ -14,4 +14,4 @@ class ZoneSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Zone
-        fields = ['id', 'name', 'distributions']
+        fields = ['id', 'name', 'distributions','updated_at']
